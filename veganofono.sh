@@ -1,4 +1,8 @@
 #!/bin/bash
+# Veganofono 0.1
+# por EyPacha! parte del proyecto Musica con Cualquier Cosa
+# www.eypacha.com.ar
+
 while :
 do
 clear
