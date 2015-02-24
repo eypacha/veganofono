@@ -4,6 +4,7 @@ Simple-sampler pensado ara usar con [Raspberry Pi](http://www.raspberrypi.org/),
 Por [Ey Pacha!](http://eypacha.com.ar)
 
 - [DESCRIPCIÓN](#descripcion)
+- [DEPENDENCIAS](#dependencias)
 - [EJECUCIÓN](#ejecucion)
 - [USO](#uso)
 - [TERMINAR](#terminar)
@@ -13,6 +14,10 @@ Por [Ey Pacha!](http://eypacha.com.ar)
 
 # DESCRIPCION
 **veganofono.sh** es un pequeño script para bash que reproduce sonidos al presionar diferentes teclas del teclado. El script debe su nombre a que fue diseñado para usarse en una instalación sonora homónima, en la cual el script se ejecuta automáticamente dentro de un ordenador [Raspberry Pi](http://www.raspberrypi.org/), utilizando un [Makey Makey](http://makeymakey.com/) en lugar de teclado y conectando el mismo a 8 verduras locales del lugar donde se lo interprete. 
+
+# DEPENDENCIAS
+Para poder ejecutar el script deben estar instalados el siguiente paquetes:
+- `aplay` reproductor de sonidos por línea de comandos para [ALSA](https://es.wikipedia.org/wiki/Advanced_Linux_Sound_Architecture).
 
 # EJECUCION
 Para ejecutar sobre Linux sólo debes ejecutar el comando **bash** seguido por la ruta del script como argumento. De encontrarse en el directorio actual bastará con ejecutar el siguiente comando:

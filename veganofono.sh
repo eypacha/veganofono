@@ -12,13 +12,13 @@ NC='\033[0m' # No Color
 tit='Veganófono'
 
 # Inhabilita el CapsLock
-xkbset nullify lock
+# xkbset nullify lock
 
 # Función que atrapa la interrupción del usuario
 function int_handler {
   clear  
   echo -e "${gr1}Gracias por usar el $tit. ¡Vuelva pronto!${NC}"
-  xkbset nullify -lock
+  # xkbset nullify -lock
  exit
 }
 
