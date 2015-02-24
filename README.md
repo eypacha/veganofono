@@ -25,14 +25,14 @@ O también puedes directamente escribir **./** seguido del script:
 # USO
 Al presionar las diferentes teclas se reproducen los sonidos de la escala de **Do Mayor**. Siguiendo con la preconfiguración del [Makey Makey](http://makeymakey.com/):
 
-- **Do**	⇦
-- **Re**	⇧
-- **Mi**	⇨
-- **Fa**	⇩
-- **Sol**	Barra espaciadora
-- **La**	a
-- **Si**	w
-- **Do**	d
+- **Do** `⇦ Fecha izquieda`
+- **Re** `⇧ Flecha arriba`
+- **Mi** `⇨ Flecha derecha`
+- **Fa** `⇩ Flecha abajo`
+- **Sol** `Barra espaciadora`
+- **La** `a minúscula`
+- **Si** `w minúscula`
+- **Do** `d minúscula`
 
 # TERMINAR
 Para terminar salir del Veganófono hay que presionar la conbinación de escape **Ctrl-C** y con eso se saldrá del programa permitiendo ejecutar los procesos necesarios del script. Se recomienda no terminar el programa presionando **Ctrl-Z** ya que se abortaría la correcta ejecución del programa y podrián quedar procesos inconclusos.
@@ -40,10 +40,10 @@ Para terminar salir del Veganófono hay que presionar la conbinación de escape 
 # FAQ
 ### ¿A qué suena el Veganófono?
 Los sonidos fueron sintetizados usando [Audacity](http://audacity.sourceforge.net/?lang=es). Utilizando la opción **Generar** / **Tono...** y eligiendo las siguientes opciones:
-- **Forma de onda:**	`Cuadrada`
+- **Forma de onda:** `Cuadrada`
 - **Frecuencia (Hz):** `261.63`, `293.66`, `329.63`, `349.23`, `392`, `440`, `493.88`, `523.26`
-- **Amplitud (0-1):**	`0,8`
-- **Duración**	`00h 00m 00.300s`
+- **Amplitud (0-1):** `0,8`
+- **Duración:** `00h 00m 00.300s`
 
 ### ¿Cuántas notas se pueden tocar al mismo tiempo?
 Como es sabido el **Blocking** o la incapacidad de pulsar varias teclas al mismo tiempo depende del modelo del teclado y su arquitectura. Pronto investigaremos sobre cómo responde el [Makey Makey](http://makeymakey.com/) a las pulsaciones múltiples.
@@ -77,4 +77,4 @@ Bajo las condiciones siguientes:
 - **Reconocimiento**: Debe reconocer adecuadamente la autoría, proporcionar un enlace a la licencia e indicar si se han realizado cambios. Puede hacerlo de cualquier manera razonable, pero no de una manera que sugiera que tiene el apoyo del licenciador o lo recibe por el uso que hace.
 - **CompartirIgual**: Si remezcla, transforma o crea a partir del material, deberá difundir sus contribuciones bajo la misma licencia que el original.
 
-[EyPacha!](http://eypacha.com.ar) 2015.
+README.md escrito por [EyPacha!](http://eypacha.com.ar) en Febrero de 2015.
