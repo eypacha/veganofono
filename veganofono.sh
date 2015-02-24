@@ -7,39 +7,78 @@
 gr1='\033[1;32m'
 gr2='\033[0;32m'
 red='\033[0;31m'
+yel='\033[1;33m'
 NC='\033[0m' # No Color
+tit='Veganófono'
 
 # Inhabilita el CapsLock
 xkbset nullify lock
 
-# user interrupt trap demo
+# Función que atrapa la interrupción del usuario
 function int_handler {
   clear  
-  echo -e "${gr1}Gracias por usar el Veganófono. ¡Vuelva pronto!${NC}"
+  echo -e "${gr1}Gracias por usar el $tit. ¡Vuelva pronto!${NC}"
   xkbset nullify -lock
  exit
 }
 
-# Establish interrupt handler
 trap int_handler INT
+
+# Inicializa la funcion de reproducción
+function n {
+aplay -N -q $1".wav"
+}
+
+# Muestra el título del programa
+function titulo {
+clear
+echo -e "${yel}║   ${gr1}$tit 0.1 ${yel} ║"
+echo █████████████████████
+echo ║░█░█░║░█░█░█░║░█░█░║ 
+echo ║░║░║░║░║░║░║░║░║░║░║ 
+echo ╚═╩═╩═╩═╩═╩═╩═╩═╩═╩═╝
+}
+
+titulo 
+echo "iniciando..."
+
+# Reproduce melodía al iniciarse
+function iniciado {
+n 01 &
+sleep 0.3
+n 02 &
+sleep 0.3
+n 03 & n 01 &
+sleep 0.3
+n 04 & n 02 &
+sleep 0.3
+n 05 & n 03 &
+sleep 0.3
+n 06 & n 04 &
+sleep 0.3
+n 07 & n 02 &
+sleep 0.3
+n 08 & n 03
+}
+
+iniciado
 
 # Inicia el bucle a la espera de teclas
 while :
 do
-clear
-echo -e "${gr2}*** ${gr1}Veganófono 0.1 ${gr2}***${NC}"
+titulo
 read -n 1 -p "Esperando tecla > " mi_tecla
 echo #$mi_tecla
 
 case $mi_tecla in
-  'D') aplay -N -q 01.wav &;;
-  'A') aplay -N -q 02.wav &;;
-  'C') aplay -N -q 03.wav &;;
-  'B') aplay -N -q 04.wav &;;
-  '') aplay -N -q 05.wav &;;
-  a) aplay -N -q 06.wav &;;
-  w) aplay -N -q 07.wav &;;
-  d) aplay -N -q 08.wav &;;
+  'D') n 01 &;;
+  'A') n 02 &;;
+  'C') n 03 &;;
+  'B') n 04 &;;
+  '')  n 05 &;;
+  'a') n 06 &;;
+  'w') n 07 &;;
+  'd') n 08 &;;
 esac
 
 done
