@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640">
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>Veganofono by eypacha</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/eypacha/veganofono">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Veganofono</h1>
+            <h2>Simple sampler para usar con makey makey</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/eypacha/veganofono/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/eypacha/veganofono/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h1>
+<a id="veganÓfono-v01" class="anchor" href="#vegan%C3%93fono-v01" aria-hidden="true"><span class="octicon octicon-link"></span></a>VEGANÓFONO v0.1</h1>
+
+<p>Simple-sampler pensado para usar con <a href="http://www.raspberrypi.org/">Raspberry Pi</a>, <a href="http://makeymakey.com/">Makey Makey</a> y <a href="https://es.wikipedia.org/wiki/Verdura">verdudas</a>.</p>
+
+<p>Por <a href="http://eypacha.com.ar">Ey Pacha!</a></p>
+
+<ul>
+<li><a href="#descripcion">DESCRIPCIÓN</a></li>
+<li><a href="#dependencias">DEPENDENCIAS</a></li>
+<li><a href="#ejecucion">EJECUCIÓN</a></li>
+<li><a href="#uso">USO</a></li>
+<li><a href="#terminar">TERMINAR</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#bugs">BUGS</a></li>
+<li><a href="#copyright">COPYRIGHT</a></li>
+</ul>
+
+<h1>
+<a id="descripcion" class="anchor" href="#descripcion" aria-hidden="true"><span class="octicon octicon-link"></span></a>DESCRIPCION</h1>
+
+<p><strong>veganofono.sh</strong> es un pequeño script para bash que reproduce sonidos al presionar diferentes teclas del teclado. El script debe su nombre a que fue diseñado para usarse en una instalación sonora homónima, en la cual el script se ejecuta automáticamente dentro de un ordenador <a href="http://www.raspberrypi.org/">Raspberry Pi</a>, utilizando un <a href="http://makeymakey.com/">Makey Makey</a> en lugar de teclado y conectando el mismo a 8 verduras locales del lugar donde se lo interprete. </p>
+
+<h1>
+<a id="dependencias" class="anchor" href="#dependencias" aria-hidden="true"><span class="octicon octicon-link"></span></a>DEPENDENCIAS</h1>
+
+<p>Para poder ejecutar el script deben estar instalados el siguiente paquetes:</p>
+
+<ul>
+<li>
+<code>aplay</code> reproductor de sonidos por línea de comandos para <a href="https://es.wikipedia.org/wiki/Advanced_Linux_Sound_Architecture">ALSA</a>.</li>
+</ul>
+
+<h1>
+<a id="ejecucion" class="anchor" href="#ejecucion" aria-hidden="true"><span class="octicon octicon-link"></span></a>EJECUCION</h1>
+
+<p>Para ejecutar sobre Linux sólo debes ejecutar el comando <strong>bash</strong> seguido por la ruta del script como argumento. De encontrarse en el directorio actual bastará con ejecutar el siguiente comando:</p>
+
+<pre><code>bash veganofono.sh
+</code></pre>
+
+<p>O también puedes directamente escribir <strong>./</strong> seguido del script:</p>
+
+<pre><code>./veganofono.sh
+</code></pre>
+
+<h1>
+<a id="uso" class="anchor" href="#uso" aria-hidden="true"><span class="octicon octicon-link"></span></a>USO</h1>
+
+<p>Al presionar las diferentes teclas se reproducen los sonidos de la escala de <strong>Do Mayor</strong>. Siguiendo con la preconfiguración del <a href="http://makeymakey.com/">Makey Makey</a>:</p>
+
+<ul>
+<li>
+<strong>Do</strong> <code>⇦ Fecha izquieda</code>
+</li>
+<li>
+<strong>Re</strong> <code>⇧ Flecha arriba</code>
+</li>
+<li>
+<strong>Mi</strong> <code>⇨ Flecha derecha</code>
+</li>
+<li>
+<strong>Fa</strong> <code>⇩ Flecha abajo</code>
+</li>
+<li>
+<strong>Sol</strong> <code>Barra espaciadora</code>
+</li>
+<li>
+<strong>La</strong> <code>a minúscula</code>
+</li>
+<li>
+<strong>Si</strong> <code>w minúscula</code>
+</li>
+<li>
+<strong>Do</strong> <code>d minúscula</code>
+</li>
+</ul>
+
+<h1>
+<a id="terminar" class="anchor" href="#terminar" aria-hidden="true"><span class="octicon octicon-link"></span></a>TERMINAR</h1>
+
+<p>Para terminar salir del Veganófono hay que presionar la conbinación de escape <strong>Ctrl-C</strong> y con eso se saldrá del programa permitiendo ejecutar los procesos necesarios del script. Se recomienda no terminar el programa presionando <strong>Ctrl-Z</strong> ya que se abortaría la correcta ejecución del programa y podrián quedar procesos inconclusos.</p>
+
+<h1>
+<a id="faq" class="anchor" href="#faq" aria-hidden="true"><span class="octicon octicon-link"></span></a>FAQ</h1>
+
+<h3>
+<a id="a-qué-suena-el-veganófono" class="anchor" href="#a-qu%C3%A9-suena-el-vegan%C3%B3fono" aria-hidden="true"><span class="octicon octicon-link"></span></a>¿A qué suena el Veganófono?</h3>
+
+<p>El <strong>Vegáfono</strong> no suena a clorofila, los sonidos fueron sintetizados usando <a href="http://audacity.sourceforge.net/?lang=es">Audacity</a>. Utilizando la opción <strong>Generar</strong> / <strong>Tono...</strong> y eligiendo las siguientes opciones:</p>
+
+<ul>
+<li>
+<strong>Forma de onda:</strong> <code>Cuadrada</code>
+</li>
+<li>
+<strong>Frecuencia (Hz):</strong> <code>261.63</code>, <code>293.66</code>, <code>329.63</code>, <code>349.23</code>, <code>392</code>, <code>440</code>, <code>493.88</code>, <code>523.26</code>
+</li>
+<li>
+<strong>Amplitud (0-1):</strong> <code>0,8</code>
+</li>
+<li>
+<strong>Duración:</strong> <code>00h 00m 00.300s</code>
+</li>
+</ul>
+
+<h3>
+<a id="cuántas-notas-se-pueden-tocar-al-mismo-tiempo" class="anchor" href="#cu%C3%A1ntas-notas-se-pueden-tocar-al-mismo-tiempo" aria-hidden="true"><span class="octicon octicon-link"></span></a>¿Cuántas notas se pueden tocar al mismo tiempo?</h3>
+
+<p>Como es sabido el <strong>Blocking</strong> o la incapacidad de pulsar varias teclas al mismo tiempo depende del modelo del teclado y su arquitectura. Pronto investigaremos sobre cómo responde el <a href="http://makeymakey.com/">Makey Makey</a> a las pulsaciones múltiples.</p>
+
+<h3>
+<a id="cómo-las-teclas-que-disparan-los-sonidos" class="anchor" href="#c%C3%B3mo-las-teclas-que-disparan-los-sonidos" aria-hidden="true"><span class="octicon octicon-link"></span></a>¿Cómo las teclas que disparan los sonidos?</h3>
+
+<p>Si quieres cambiar las teclas que disparan los difentes sonidos (o agregar más) solo debes modificar el caractér entre <code>''</code> dentro de la estructura <code>case $mi_tecla in</code>  y modificarla por el caracter en cuestión.</p>
+
+<div class="highlight highlight-bash"><pre>    <span class="pl-k">case</span> <span class="pl-vo">$mi_tecla</span> in
+      <span class="pl-s1"><span class="pl-pds">'</span>D<span class="pl-pds">'</span></span>) aplay -N -q 01.wav <span class="pl-k">&amp;</span>;;
+      <span class="pl-s1"><span class="pl-pds">'</span>A<span class="pl-pds">'</span></span>) aplay -N -q 02.wav <span class="pl-k">&amp;</span>;;
+      <span class="pl-s1"><span class="pl-pds">'</span>C<span class="pl-pds">'</span></span>) aplay -N -q 03.wav <span class="pl-k">&amp;</span>;;
+      <span class="pl-s1"><span class="pl-pds">'</span>B<span class="pl-pds">'</span></span>) aplay -N -q 04.wav <span class="pl-k">&amp;</span>;;
+      <span class="pl-s1"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>) aplay -N -q 05.wav <span class="pl-k">&amp;</span>;;
+      <span class="pl-s1"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>) aplay -N -q 06.wav <span class="pl-k">&amp;</span>;;
+      <span class="pl-s1"><span class="pl-pds">'</span>w<span class="pl-pds">'</span></span>) aplay -N -q 07.wav <span class="pl-k">&amp;</span>;;
+      <span class="pl-s1"><span class="pl-pds">'</span>d<span class="pl-pds">'</span></span>) aplay -N -q 08.wav <span class="pl-k">&amp;</span>;;
+    <span class="pl-k">esac</span></pre></div>
+
+<h1>
+<a id="bugs" class="anchor" href="#bugs" aria-hidden="true"><span class="octicon octicon-link"></span></a>BUGS</h1>
+
+<p>El <strong>Vegáfono</strong> fue hecho a las apuradas (de hecho se tardó mas tiempo en escribir este <strong>README.md</strong> que en desarrollar el script. Por lo tanto está tan verde como un <a href="https://es.wikipedia.org/wiki/Cucumis_sativus">pepino</a>. Si encuentras un bug o tienes una sugerencia no dudes en escribir a <a href="mailto://contacto@eypacha.com.ar">contacto@eypacha.com.ar</a>.</p>
+
+<h1>
+<a id="copyright" class="anchor" href="#copyright" aria-hidden="true"><span class="octicon octicon-link"></span></a>COPYRIGHT</h1>
+
+<p>El <strong>Vegáfono</strong> utiliza una licencia <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">CC BY-SA</a> (Creative Commons Compartir-Adaptar). Por lo tanto usted es libre de:</p>
+
+<ul>
+<li>
+<strong>Compartir</strong>: copiar y redistribuir el material en cualquier medio o formato</li>
+<li>
+<strong>Adaptar</strong>: remezclar, transformar y crear a partir del material para cualquier finalidad, incluso comercial.</li>
+</ul>
+
+<p>Bajo las condiciones siguientes:</p>
+
+<ul>
+<li>
+<strong>Reconocimiento</strong>: Debe reconocer adecuadamente la autoría, proporcionar un enlace a la licencia e indicar si se han realizado cambios. Puede hacerlo de cualquier manera razonable, pero no de una manera que sugiera que tiene el apoyo del licenciador o lo recibe por el uso que hace.</li>
+<li>
+<strong>CompartirIgual</strong>: Si remezcla, transforma o crea a partir del material, deberá difundir sus contribuciones bajo la misma licencia que el original.</li>
+</ul>
+
+<p>Este <code>README.md</code> fue escrito por <a href="http://eypacha.com.ar">EyPacha!</a> en Febrero de 2015.</p>
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/eypacha">eypacha</a> can be found on <a href="https://github.com/eypacha/veganofono">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
