@@ -2,18 +2,18 @@
 Simple-sampler para usar con [Makey Makey](http://makeymakey.com/).
 Por [Ey Pacha!](http://eypacha.com.ar)
 
-- [DESCRIPCIÓN](#descripción)
-- [EJECUCIÓN](#ejecución)
+- [DESCRIPCIÓN](#descripcion)
+- [EJECUCIÓN](#ejecucion)
 - [USO](#uso)
 - [TERMINAR](#terminar)
 - [FAQ](#faq)
 - [BUGS](#bugs)
 - [COPYRIGHT](#copyright)
 
-# DESCRIPCIÓN
+# DESCRIPCION
 **veganofono.sh** es un pequeño script para bash que reproduce sonidos al presionar diferentes teclas del teclado. El script debe su nombre a que fue diseñado para usarse en una instalación sonora homónima, en la cual el script se ejecuta automáticamente dentro de un ordenador [Raspberry Pi](http://www.raspberrypi.org/), utilizando un [Makey Makey](http://makeymakey.com/) en lugar de teclado y conectando el mismo a 8 verduras locales del lugar donde se lo interprete. 
 
-# EJECUCIÓN
+# EJECUCION
 Para ejecutar sobre Linux sólo debes ejecutar el comando **bash** seguido por la ruta del script como argumento. De encontrarse en el directorio actual bastará con ejecutar el siguiente comando:
 
 	bash veganofono.sh
@@ -39,7 +39,7 @@ Para terminar salir del Veganófono hay que presionar la conbinación de escape 
 
 # FAQ
 ### ¿A qué suena el Veganófono?
-Los sonidos fueron sintetizados usando [Audacity](http://audacity.sourceforge.net/?lang=es). Utilizando la opción **Generar** / **Tono...** y eligiendo las siguientes opciones:
+El **Vegáfono** no suena a clorofila, los sonidos fueron sintetizados usando [Audacity](http://audacity.sourceforge.net/?lang=es). Utilizando la opción **Generar** / **Tono...** y eligiendo las siguientes opciones:
 - **Forma de onda:** `Cuadrada`
 - **Frecuencia (Hz):** `261.63`, `293.66`, `329.63`, `349.23`, `392`, `440`, `493.88`, `523.26`
 - **Amplitud (0-1):** `0,8`
@@ -77,4 +77,4 @@ Bajo las condiciones siguientes:
 - **Reconocimiento**: Debe reconocer adecuadamente la autoría, proporcionar un enlace a la licencia e indicar si se han realizado cambios. Puede hacerlo de cualquier manera razonable, pero no de una manera que sugiera que tiene el apoyo del licenciador o lo recibe por el uso que hace.
 - **CompartirIgual**: Si remezcla, transforma o crea a partir del material, deberá difundir sus contribuciones bajo la misma licencia que el original.
 
-README.md escrito por [EyPacha!](http://eypacha.com.ar) en Febrero de 2015.
+Este `README.md` fue escrito por [EyPacha!](http://eypacha.com.ar) en Febrero de 2015.
