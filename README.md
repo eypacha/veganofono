@@ -1,5 +1,6 @@
 # VEGANÓFONO v0.1
-Simple-sampler para usar con [Makey Makey](http://makeymakey.com/).
+Simple-sampler pensado ara usar con [Raspberry Pi](http://www.raspberrypi.org/), [Makey Makey](http://makeymakey.com/) y [verdudas](https://es.wikipedia.org/wiki/Verdura).
+
 Por [Ey Pacha!](http://eypacha.com.ar)
 
 - [DESCRIPCIÓN](#descripcion)
