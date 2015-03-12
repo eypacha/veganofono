@@ -10,6 +10,7 @@ red='\033[0;31m'
 yel='\033[1;33m'
 NC='\033[0m' # No Color
 tit='Veganófono'
+mi_tecla='0'
 
 # Inhabilita el CapsLock
 # xkbset nullify lock
@@ -27,6 +28,8 @@ trap int_handler INT
 # Inicializa la funcion de reproducción
 function n {
 aplay -N -q $1".wav"
+
+
 }
 
 # Muestra el título del programa
@@ -35,7 +38,19 @@ clear
 echo -e "${yel}║   ${gr1}$tit 0.1 ${yel} ║"
 echo █████████████████████
 echo ║░█░█░║░█░█░█░║░█░█░║ 
-echo ║░║░║░║░║░║░║░║░║░║░║ 
+
+case $mi_tecla in
+  'D') echo ║o║░║░║░║░║░║░║░║░║░║;;
+  'A') echo ║░║o║░║░║░║░║░║░║░║░║;;
+  'C') echo ║░║░║o║░║░║░║░║░║░║░║;;
+  'B') echo ║░║░║░║o║░║░║░║░║░║░║;;
+  '') echo ║░║░║░║░║o║░║░║░║░║░║;;
+  'a') echo ║░║░║░║░║░║o║░║░║░║░║;;
+  'w') echo ║░║░║░║░║░║░║o║░║░║░║;;
+  'd') echo ║░║░║░║░║░║░║░║o║░║░║;;
+  *) echo ║░║░║░║░║░║░║░║░║░║░║;;
+esac
+
 echo ╚═╩═╩═╩═╩═╩═╩═╩═╩═╩═╝
 }
 
