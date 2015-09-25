@@ -47,7 +47,7 @@ case $mi_tecla in
   '') echo ║░║░║░║░║o║░║░║░║░║░║;;
   'a') echo ║░║░║░║░║░║o║░║░║░║░║;;
   'w') echo ║░║░║░║░║░║░║o║░║░║░║;;
-  'd') echo ║░║░║░║░║░║░║░║o║░║░║;;
+  's') echo ║░║░║░║░║░║░║░║o║░║░║;;
   *) echo ║░║░║░║░║░║░║░║░║░║░║;;
 esac
 
@@ -76,7 +76,7 @@ sleep 0.3
 n 08 & n 03
 }
 
-iniciado
+# iniciado
 
 # Inicia el bucle a la espera de teclas
 while :
