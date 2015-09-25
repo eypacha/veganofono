@@ -12,7 +12,7 @@ NC='\033[0m' # No Color
 tit='Veganófono'
 mi_tecla='0'
 dot='\033[1;31mo\033[1;33m'
-spc='            '
+spc='            ' # Centrado en pantalla
 
 # Inhabilita el CapsLock
 # xkbset nullify lock
@@ -55,6 +55,9 @@ case $mi_tecla in
   'a') echo -e "$spc║░║░║░║░║░║${dot}║░║░║░║░║";;
   'w') echo -e "$spc║░║░║░║░║░║░║${dot}║░║░║░║";;
   's') echo -e "$spc║░║░║░║░║░║░║░║${dot}║░║░║";;
+  'd') echo -e "$spc║░║░║░║\033[1;31mNOISE\033[1;33m║░║░║░║░║";;
+  'f') echo -e "$spc║░║░║░║\033[1;31mCHIRP\033[1;33m║\033[1;31mE\033[1;33m║░║░║░║";;
+  'g') echo -e "$spc║░║░║░║\033[1;31mCHIRP\033[1;33m║\033[1;31mA\033[1;33m║░║░║░║";;
     *) echo -e "$spc║░║░║░║░║░║░║░║░║░║░║";;
 esac
 
@@ -102,6 +105,9 @@ case $mi_tecla in
   'a') n 06 &;;
   'w') n 07 &;;
   's') n 08 &;;
+  'd') n 09 &;;
+  'f') n 10 &;;
+  'g') n 11 &;;
 esac
 
 done
