@@ -11,6 +11,8 @@ yel='\033[1;33m'
 NC='\033[0m' # No Color
 tit='Veganófono'
 mi_tecla='0'
+dot='\033[1;31mo\033[1;33m'
+spc='            '
 
 # Inhabilita el CapsLock
 # xkbset nullify lock
@@ -35,23 +37,29 @@ aplay -N -q $1".wav"
 # Muestra el título del programa
 function titulo {
 clear
-echo -e "${yel}║   ${gr1}$tit 0.1 ${yel} ║"
-echo █████████████████████
-echo ║░█░█░║░█░█░█░║░█░█░║ 
+echo
+echo -e "$spc${yel}   ╔═══════╗         "
+echo -e "$spc ╔═╝       ╚═╗       "
+echo -e "$spc╔╝           ╚═════╗ "
+echo -e "$spc║  ${gr1}$tit 0.1${yel}  ╚╗"  
+echo -e "$spc║                   ║"
+echo -e "$spc█████████████████████"
+echo -e "$spc║░█░█░║░█░█░█░║░█░█░║"
 
 case $mi_tecla in
-  'D') echo ║o║░║░║░║░║░║░║░║░║░║;;
-  'A') echo ║░║o║░║░║░║░║░║░║░║░║;;
-  'C') echo ║░║░║o║░║░║░║░║░║░║░║;;
-  'B') echo ║░║░║░║o║░║░║░║░║░║░║;;
-  '') echo ║░║░║░║░║o║░║░║░║░║░║;;
-  'a') echo ║░║░║░║░║░║o║░║░║░║░║;;
-  'w') echo ║░║░║░║░║░║░║o║░║░║░║;;
-  's') echo ║░║░║░║░║░║░║░║o║░║░║;;
-  *) echo ║░║░║░║░║░║░║░║░║░║░║;;
+  'D') echo -e "$spc║${dot}║░║░║░║░║░║░║░║░║░║";;
+  'A') echo -e "$spc║░║${dot}║░║░║░║░║░║░║░║░║";;
+  'C') echo -e "$spc║░║░║${dot}║░║░║░║░║░║░║░║";;
+  'B') echo -e "$spc║░║░║░║${dot}║░║░║░║░║░║░║";;
+   '') echo -e "$spc║░║░║░║░║${dot}║░║░║░║░║░║";;
+  'a') echo -e "$spc║░║░║░║░║░║${dot}║░║░║░║░║";;
+  'w') echo -e "$spc║░║░║░║░║░║░║${dot}║░║░║░║";;
+  's') echo -e "$spc║░║░║░║░║░║░║░║${dot}║░║░║";;
+    *) echo -e "$spc║░║░║░║░║░║░║░║░║░║░║";;
 esac
 
-echo ╚═╩═╩═╩═╩═╩═╩═╩═╩═╩═╝
+echo -e "$spc╠╦╩═╩═╩═╩═╩═╩═╩═╩═╩╦╣"
+echo -e "$spc╚╝                 ╚╝"
 }
 
 titulo 
@@ -82,7 +90,7 @@ n 08 & n 03
 while :
 do
 titulo
-read -n 1 -p "Esperando tecla > " mi_tecla
+read -n 1 -p "$spc    waiting... > " mi_tecla
 echo #$mi_tecla
 
 case $mi_tecla in
