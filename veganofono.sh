@@ -93,7 +93,7 @@ case $mi_tecla in
   '')  n 05 &;;
   'a') n 06 &;;
   'w') n 07 &;;
-  'd') n 08 &;;
+  's') n 08 &;;
 esac
 
 done
