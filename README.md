@@ -1,7 +1,7 @@
 # VEGANÓFONO v0.1
 Simple-sampler pensado para usar con [Raspberry Pi](http://www.raspberrypi.org/), [Makey Makey](http://makeymakey.com/) y [verdudas](https://es.wikipedia.org/wiki/Verdura).
 
-Por [Ey Pacha!](http://eypacha.com.ar)
+Por [Ey Pacha!](http://eypacha.com)
 
 - [DESCRIPCIÓN](#descripcion)
 - [DEPENDENCIAS](#dependencias)
@@ -56,7 +56,7 @@ El **Vegáfono** no suena a clorofila, los sonidos fueron sintetizados usando [A
 ### ¿Cuántas notas se pueden tocar al mismo tiempo?
 Como es sabido el **Blocking** o la incapacidad de pulsar varias teclas al mismo tiempo depende del modelo del teclado y su arquitectura. Pronto investigaremos sobre cómo responde el [Makey Makey](http://makeymakey.com/) a las pulsaciones múltiples.
 
-### ¿Cómo las teclas que disparan los sonidos?
+### ¿Cómo cambiar las teclas que disparan los sonidos?
 Si quieres cambiar las teclas que disparan los difentes sonidos (o agregar más) solo debes modificar el caractér entre `''` dentro de la estructura `case $mi_tecla in`  y modificarla por el caracter en cuestión.
 
 ```bash
@@ -72,7 +72,7 @@ Si quieres cambiar las teclas que disparan los difentes sonidos (o agregar más)
 	esac
 ```
 # BUGS
-El **Vegáfono** fue hecho a las apuradas (de hecho se tardó mas tiempo en escribir este **README.md** que en desarrollar el script. Por lo tanto está tan verde como un [pepino](https://es.wikipedia.org/wiki/Cucumis_sativus). Si encuentras un bug o tienes una sugerencia no dudes en escribir a [contacto@eypacha.com.ar](mailto://contacto@eypacha.com.ar).
+El **Vegáfono** fue hecho a las apuradas (de hecho se tardó mas tiempo en escribir este **README.md** que en desarrollar el script. Por lo tanto está tan verde como un [pepino](https://es.wikipedia.org/wiki/Cucumis_sativus). Si encuentras un bug o tienes una sugerencia no dudes en escribirme.
 
 # COPYRIGHT
 El **Vegáfono** utiliza una licencia [CC BY-SA](http://creativecommons.org/licenses/by-sa/4.0/deed.es_ES) (Creative Commons Compartir-Adaptar). Por lo tanto usted es libre de:
@@ -85,4 +85,4 @@ Bajo las condiciones siguientes:
 - **Reconocimiento**: Debe reconocer adecuadamente la autoría, proporcionar un enlace a la licencia e indicar si se han realizado cambios. Puede hacerlo de cualquier manera razonable, pero no de una manera que sugiera que tiene el apoyo del licenciador o lo recibe por el uso que hace.
 - **CompartirIgual**: Si remezcla, transforma o crea a partir del material, deberá difundir sus contribuciones bajo la misma licencia que el original.
 
-Este `README.md` fue escrito por [EyPacha!](http://eypacha.com.ar) en Febrero de 2015.
+Este `README.md` fue escrito por [EyPacha!](http://eypacha.com) en Febrero de 2015.
